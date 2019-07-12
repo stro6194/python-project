@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+      - pytest
+  build:
+    commands:
+      - echo Package application files.
+      - zip python-app.zip app.py requirements.txt
+
+artifacts:
+  files:
+    - python-app.zip
+  name: python-app-$(date +%y%m%d%H%M).zip
