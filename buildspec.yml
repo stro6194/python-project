@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo Package application files.
-      - zip python-app.zip app.py requirements.txt
+      - zip -r python-app.zip *
 
 artifacts:
   files:
