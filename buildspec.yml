@@ -10,10 +10,9 @@ phases:
       - pytest
   build:
     commands:
-      - echo Package application files.
-      - zip -r python-app.zip *
+      - echo No need to build any code.
 
 artifacts:
   files:
-    - python-app.zip
+    - '**/*'
   name: python-app-$(date +%y%m%d%H%M).zip
