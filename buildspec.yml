@@ -11,7 +11,9 @@ phases:
       - pytest
   build:
     commands:
-      - echo No need to build any code.
+      - echo Build the CSS using less.
+      - npm install -g less
+      - lessc styles.less styles.css
 
 artifacts:
   files:
