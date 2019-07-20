@@ -7,13 +7,15 @@ phases:
       python: 3.7
   pre_build:
     commands:
+      - echo Test the python application.
       - pip install -r requirements.txt
       - pytest
   build:
     commands:
       - echo Build the CSS using less.
       - npm install -g less
-      - lessc styles.less styles.css
+      - mkdir -p static/css
+      - lessc styles.less static/css/styles.css
 
 artifacts:
   files:
