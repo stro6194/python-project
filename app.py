@@ -6,9 +6,11 @@ app = Flask(__name__)
 def main_page():
     return render_template('index.html')
 
+
 @app.route('/health')
-def main_page():
+def health_check_page():
     return 'OK'
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
