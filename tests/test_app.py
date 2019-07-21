@@ -1,6 +1,6 @@
-from app import main_page
+from app import health_check_page
 
 
 def test_main_page():
-    result = main_page()
-    assert result == 'Welcome to the fancy website!'
+    result = health_check_page()
+    assert result == 'OK'
