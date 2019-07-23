@@ -6,7 +6,6 @@ app = Flask(__name__)
 def main_page():
     return render_template('index.html')
 
-
 @app.route('/health')
 def health_check_page():
     return 'OK'
